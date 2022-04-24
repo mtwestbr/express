@@ -13,7 +13,6 @@ app.get("/", function(req, res) {
 app.post("/", function(req, res) {
   console.log(req.body.jokeType)
   //console.log("Post Received")
-  //const apiid = "d81988da1eeda13dd1b76436ef5ab137";
   const url = "https://v2.jokeapi.dev/joke/" + req.body.jokeType
   //const url = "https://api.openweathermap.org/data/2.5/weather?q=London&" + apiid
   https.get(url, function(response) {
